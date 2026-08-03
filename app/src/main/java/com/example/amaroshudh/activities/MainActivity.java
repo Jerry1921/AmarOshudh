@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
+        // This part is for the floating button on the home screen to work on tap
         FloatingActionButton fab = findViewById(R.id.fabAddMedicine);
 
         fab.setOnClickListener(v -> {

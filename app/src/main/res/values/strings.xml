@@ -1,3 +1,15 @@
 <resources>
+
     <string name="app_name">AmarOshudh</string>
+
+    <string name="today_medicine">আজকের ঔষধ</string>
+
+    <string name="empty_title">No medicines added yet</string>
+
+    <string name="empty_description">
+        Tap the + button below to add your first medicine.
+    </string>
+
+    <string name="add_medicine">Add Medicine</string>
+
 </resources>
