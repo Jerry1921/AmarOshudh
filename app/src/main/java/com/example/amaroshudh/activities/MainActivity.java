@@ -1,5 +1,6 @@
 package com.example.amaroshudh.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -24,7 +25,12 @@ public class MainActivity extends AppCompatActivity {
         FloatingActionButton fab = findViewById(R.id.fabAddMedicine);
 
         fab.setOnClickListener(v -> {
-            Toast.makeText(this, "Add Medicine Clicked!", Toast.LENGTH_SHORT).show();
+
+            Intent intent = new Intent(MainActivity.this,
+                    AddMedicineActivity.class);
+
+            startActivity(intent);
+
         });
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
