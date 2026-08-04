@@ -1,5 +1,10 @@
 package com.example.amaroshudh.activities;
 
+import android.app.TimePickerDialog;
+import java.util.Calendar;
+import java.util.Locale;
+
+
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -17,8 +22,37 @@ public class AddMedicineActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_medicine);
         MaterialButton btnSelectTime = findViewById(R.id.btnSelectTime);
+
         btnSelectTime.setOnClickListener(v -> {
-            Toast.makeText(this, "Button Clicked!", Toast.LENGTH_SHORT).show();
+
+            Calendar calendar = Calendar.getInstance();
+
+            int hour = calendar.get(Calendar.HOUR_OF_DAY);
+            int minute = calendar.get(Calendar.MINUTE);
+
+            TimePickerDialog timePickerDialog = new TimePickerDialog(
+                    AddMedicineActivity.this,
+
+                    (view, selectedHour, selectedMinute) -> {
+
+                        String time = String.format(
+                                Locale.getDefault(),
+                                "%02d:%02d",
+                                selectedHour,
+                                selectedMinute
+                        );
+
+                        btnSelectTime.setText(time);
+
+                    },
+
+                    hour,
+                    minute,
+                    false
+            );
+
+            timePickerDialog.show();
+
         });
     }
 }

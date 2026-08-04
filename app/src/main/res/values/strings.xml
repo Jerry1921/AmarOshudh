@@ -16,4 +16,14 @@
 
     <string name="enter_medicine_name">Enter medicine name</string>
 
+    <string name="meal_time">খাওয়ার সময়</string>
+    <string name="before_meal">খাওয়ার আগে</string>
+    <string name="after_meal">খাওয়ার পরে</string>
+
+    <string name="duration">সময়কাল</string>
+    <string name="weeks">সপ্তাহ</string>
+    <string name="months">মাস</string>
+
+    <string name="unit">একক</string>
+
 </resources>
