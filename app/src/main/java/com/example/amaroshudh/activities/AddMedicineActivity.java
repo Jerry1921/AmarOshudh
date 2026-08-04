@@ -4,6 +4,9 @@ import android.app.TimePickerDialog;
 import java.util.Calendar;
 import java.util.Locale;
 
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+
 
 import android.os.Bundle;
 import android.widget.Toast;
@@ -21,6 +24,20 @@ public class AddMedicineActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_medicine);
+
+        Spinner spinner = findViewById(R.id.spinnerDurationType);
+
+        ArrayAdapter<CharSequence> adapter =
+                ArrayAdapter.createFromResource(
+                        this,
+                        R.array.duration_units,
+                        android.R.layout.simple_spinner_item);
+
+        adapter.setDropDownViewResource(
+                android.R.layout.simple_spinner_dropdown_item);
+
+        spinner.setAdapter(adapter);
+
         MaterialButton btnSelectTime = findViewById(R.id.btnSelectTime);
 
         btnSelectTime.setOnClickListener(v -> {
