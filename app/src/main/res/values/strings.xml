@@ -12,4 +12,8 @@
 
     <string name="add_medicine">Add Medicine</string>
 
+    <string name="medicine_name">Medicine Name</string>
+
+    <string name="enter_medicine_name">Enter medicine name</string>
+
 </resources>
