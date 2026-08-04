@@ -1,10 +1,12 @@
 package com.example.amaroshudh.activities;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.amaroshudh.R;
+import com.google.android.material.button.MaterialButton;
 
 //tells that this class is a screen
 public class AddMedicineActivity extends AppCompatActivity {
@@ -14,5 +16,9 @@ public class AddMedicineActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_medicine);
+        MaterialButton btnSelectTime = findViewById(R.id.btnSelectTime);
+        btnSelectTime.setOnClickListener(v -> {
+            Toast.makeText(this, "Button Clicked!", Toast.LENGTH_SHORT).show();
+        });
     }
 }
