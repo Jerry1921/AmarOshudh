@@ -35,3 +35,5 @@ Bangla Voice Reminder
 
 Milestone 7
 Testing & APK
+
+Lesson 3.5 - Make the + and - Buttons Functional
