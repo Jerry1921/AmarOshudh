@@ -6,6 +6,7 @@ import java.util.Locale;
 
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 
 
@@ -17,6 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.amaroshudh.R;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.textfield.TextInputEditText;
 
 //tells that this class is a screen
 public class AddMedicineActivity extends AppCompatActivity {
@@ -94,6 +96,34 @@ public class AddMedicineActivity extends AppCompatActivity {
                 duration--;
                 tvDurationValue.setText(String.valueOf(duration));
             }
+
+        });
+
+        MaterialButton btnSaveMedicine = findViewById(R.id.btnSaveMedicine);
+
+        TextInputEditText etMedicineName =
+                findViewById(R.id.etMedicineName);
+
+        RadioGroup rgMealTime =
+                findViewById(R.id.rgMealTime);
+
+        Spinner spinnerDurationType =
+                findViewById(R.id.spinnerDurationType);
+
+        btnSaveMedicine.setOnClickListener(v -> {
+
+            String medicineName =
+                    etMedicineName.getText().toString().trim();
+
+            if (medicineName.isEmpty()) {
+                etMedicineName.setError("Please enter medicine name");
+                etMedicineName.requestFocus();
+                return;
+            }
+
+            Toast.makeText(this,
+                    "Medicine information is valid!",
+                    Toast.LENGTH_SHORT).show();
 
         });
 
