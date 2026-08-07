@@ -5,10 +5,12 @@ import java.util.Calendar;
 import java.util.Locale;
 
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 
 
 import android.os.Bundle;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,6 +20,8 @@ import com.google.android.material.button.MaterialButton;
 
 //tells that this class is a screen
 public class AddMedicineActivity extends AppCompatActivity {
+
+    private int duration = 1;
 
     @Override
     //Runs when the screen opens.
@@ -71,5 +75,27 @@ public class AddMedicineActivity extends AppCompatActivity {
             timePickerDialog.show();
 
         });
+
+        Button btnPlus = findViewById(R.id.btnPlus);
+        Button btnMinus = findViewById(R.id.btnMinus);
+        TextView tvDurationValue = findViewById(R.id.tvDurationValue);
+
+        btnPlus.setOnClickListener(v -> {
+
+            duration++;
+
+            tvDurationValue.setText(String.valueOf(duration));
+
+        });
+
+        btnMinus.setOnClickListener(v -> {
+
+            if (duration > 1) {
+                duration--;
+                tvDurationValue.setText(String.valueOf(duration));
+            }
+
+        });
+
     }
 }
