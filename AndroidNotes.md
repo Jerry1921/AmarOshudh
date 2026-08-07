@@ -37,3 +37,15 @@ Milestone 7
 Testing & APK
 
 Lesson 3.5 - Make the + and - Buttons Functional
+
+
+Lesson 3.5
+
+New Concepts
+
+- Variables
+- Increment operator (++)
+- Decrement operator (--)
+- Updating TextView
+- String.valueOf()
+- Prevent invalid values using if statements
