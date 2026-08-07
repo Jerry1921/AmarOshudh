@@ -1,6 +1,13 @@
 package com.example.amaroshudh.model;
 
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "medicines")
 public class Medicine {
+
+    @PrimaryKey(autoGenerate = true)
+    private int id;
 
     private String medicineName;
     private String reminderTime;
@@ -22,6 +29,14 @@ public class Medicine {
         this.mealTime = mealTime;
         this.duration = duration;
         this.durationUnit = durationUnit;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getMedicineName() {
