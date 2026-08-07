@@ -49,3 +49,31 @@ New Concepts
 - Updating TextView
 - String.valueOf()
 - Prevent invalid values using if statements
+
+
+✅ Phase 1
+Project Setup
+
+✅ Phase 2
+Add Medicine UI
+
+🔄 Phase 3
+Validation
+
+⬜ Phase 4
+Medicine Model
+
+⬜ Phase 5
+Room Database
+
+⬜ Phase 6
+RecyclerView (Home Screen)
+
+⬜ Phase 7
+AlarmManager
+
+⬜ Phase 8
+Bangla Voice Reminder
+
+⬜ Phase 9
+Testing & APK
